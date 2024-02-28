@@ -13,6 +13,6 @@ jobs:
           echo "${{ secrets.PROD_KEY }}" > ~/key.pem
           chmod 600 ~/key.pem
           cd ${{ github.workspace }}
-          scp -r -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null -i "~/key.pem" ./web/* ${{ secrets.PROD_USER }}@${{ secrets.PROD_HOST }}:/home/fabianactions.daw.inspedralbes.cat/public_html/
+          scp -r -o stricthostkeychecking=no -o UserKnownHostsFile=/dev/null -i "~/key.pem" ./web/* ${{ secrets.PROD_USER }}@${{ secrets.PROD_HOST }}:/home/a21fabrolfer/web/fabianactions.daw.inspedralbes.cat/public_html
           
       - run: echo "🍏 This job's status is ${{ job.status }}."
